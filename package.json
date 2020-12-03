@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start-day1": "node src/day1",
     "start-day2": "node src/day2",
     "start-day2-part2": "node src/day2-part2"
   },
