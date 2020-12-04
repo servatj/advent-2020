@@ -17,7 +17,7 @@ lineReader.on("line", async (line) => {
   years = [...years, line]
 });
 
-lineReader.on("close", async (line) => {
+lineReader.on("close", async () => {
   function threeSum(arr, sum) {
       for (let i = 0; i < arr.length - 2; i++) { 
           for (let j = i + 1; j < arr.length - 1; j++) { 
