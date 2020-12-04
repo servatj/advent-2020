@@ -14,7 +14,7 @@ const lineReader = readline.createInterface({
 
 lineReader.on("line", async (line) => {
   years = [...years, line]
-})
+});
 
 lineReader.on("close", async (line) => {
   years.forEach((value, index) => {
@@ -24,4 +24,4 @@ lineReader.on("close", async (line) => {
        }
     }
   })
-})
+});
