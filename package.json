@@ -9,7 +9,9 @@
     "start-day1-part1": "node src/day1-part2",
     "start-day2": "node src/day2",
     "start-day2-part2": "node src/day2-part2",
-    "start-day3": "node src/day3-part1"
+    "start-day3": "node src/day3-part1",
+    "start-day3-part2": "node src/day3-part2",
+    "start-day4-partº": "node src/day4-part1"
   },
   "keywords": [],
   "author": "",
