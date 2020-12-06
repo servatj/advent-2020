@@ -9,6 +9,8 @@ let positions = data.split('\n') // .filter( x=> x === 'FFFBBBFRRR')
 
 let result = 0;
 
+let seats = []
+
 positions.forEach( row => {
   //row = 'BFFFBBFRRR'
   const rowCommands = row.substring(0,7).split('');
@@ -49,6 +51,7 @@ positions.forEach( row => {
     moveCol(x)
   })
 
+  seats.push(calc(currentRange.rowL, currentRangeCol.rowL))
 
   if (calc(currentRange.rowL, currentRangeCol.rowL) > result) {
     result = calc(currentRange.rowL, currentRangeCol.rowL);
@@ -57,5 +60,16 @@ positions.forEach( row => {
 
 });
 
-console.log(result)
+const numbers = []
+for (let i = 0; i < 1000; i++) {
+  numbers.push(i)
+}
 
+
+console.log(seats.filter( x => x != 1023).map( x=> Number(x)).sort((a, b) => Number(a) - Number(b) ))
+
+numbers.forEach( x => {
+  if(!seats.includes(x)) {
+    console.log('yeah', x)
+  }
+})
