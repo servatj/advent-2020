@@ -8,8 +8,6 @@ const groups = data.split(/\n{2,}/g);
 
 let result = 0;
 
-console.log(groups)
-
 groups.forEach( row => {
   const line = [ ...new Set(row.replace(/\n/g, '').split(''))];
   result = result + line.length
