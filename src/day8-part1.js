@@ -33,7 +33,6 @@ const instructionOps = (command, value) => {
     },
     default: () => console.log('instruction not found')
   }
-  //ops[command]() 
   ops[command] ? ops[command]() : ops['default']();
 }
 
