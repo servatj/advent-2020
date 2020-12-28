@@ -1,27 +1,31 @@
-
-
 const getNextInvalidNumbers = (preamble, data) => {
+  //console.log(data)
 
-  const list = [];
+  let increment = 0;
 
-  for(let i = 0; i < preamble; i++) {
-    const sums = data.slice(0,preamble).map(num => {
-      if(num != data[i]) {
-        return data[i] + num;
-      }
+  const getSums = (increment = 0) => {
+    const list = [];
+    const currentPreamble = data.slice(increment, preamble + increment)
+    currentPreamble.forEach((current, index) => {
+      const sums = currentPreamble.map((num)=> {
+        if(num != current) {
+          return current + num;
+        }
+      });
+      list.push(sums.filter( x => x != undefined))
     });
-    list.push(sums.filter( x => x != undefined))
+    return list;
   }
-
 
   for(let b = preamble; b < data.length; b++) {
-    if(!list.join().includes(data[b])) {
+    const numbers = getSums(increment).join();
+    //console.log('preamble', b, preamble, data[b])
+    //console.log(numbers.join())
+    if(!numbers.includes(data[b])) {
       return data[b];
     }
+    increment++;
   }
-  console.log(list.join().includes(27))
-
-
   return 0;
 }
 

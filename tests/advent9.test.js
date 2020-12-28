@@ -8,3 +8,14 @@ test('the first invalid nummber should be 107',() => {
   const result = getNextInvalidNumbers(25, [...example, 49, 35, 107])
   expect(result).toBe(107);
 });
+
+
+test('the first invalid nummber should be 109',() => {
+  const result = getNextInvalidNumbers(25, [...example, 49, 9, 58, 107, 109])
+  expect(result).toBe(109);
+});
+
+test('the first invalid nummber should be 127',() => {
+  const result = getNextInvalidNumbers(5, data)
+  expect(result).toBe(127);
+});
